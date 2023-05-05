@@ -3,7 +3,7 @@
     "friendly_name": "HongMeiling",
     "description": "Gatekeeper",
     "author": "Invalid",
-    "version": "0.46",
+    "version": "0.48",
     "link": "",
     "id": "000000001",
     "overwrites": false,
