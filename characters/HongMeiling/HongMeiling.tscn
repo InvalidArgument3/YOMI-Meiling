@@ -1,4 +1,4 @@
-[gd_scene load_steps=206 format=2]
+[gd_scene load_steps=236 format=2]
 
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/AirAttack/attackBc004.png" type="Texture" id=1]
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
@@ -178,8 +178,8 @@
 [ext_resource path="res://characters/stickman/sprites/actionicons/slide_kick.png" type="Texture" id=176]
 [ext_resource path="res://characters/stickman/states/SlideKick.gd" type="Script" id=177]
 [ext_resource path="res://HurtboxState.gd" type="Script" id=178]
-[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/guardSit001.png" type="Texture" id=179]
-[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/guardSit000.png" type="Texture" id=180]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb004.png" type="Texture" id=179]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb003.png" type="Texture" id=180]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Wait/spellAa003.png" type="Texture" id=181]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Wait/spellAa004.png" type="Texture" id=182]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Wait/spellAa001.png" type="Texture" id=183]
@@ -195,13 +195,43 @@
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Wait/spellAa002.png" type="Texture" id=193]
 [ext_resource path="res://ui/ActionSelector/StateIcons/dropkick.png" type="Texture" id=194]
 [ext_resource path="res://characters/wizard/sprites/actionbuttons/magic_missile.png" type="Texture" id=195]
-[ext_resource path="res://ui/ActionSelector/StateIcons/divekick.png" type="Texture" id=196]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/States/DownKick.gd" type="Script" id=196]
 [ext_resource path="res://ui/ActionSelector/StateIcons/punch.png" type="Texture" id=197]
 [ext_resource path="res://characters/swordandgun/sprites/action_buttons/upward_swipe.png" type="Texture" id=198]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Shot.tscn" type="PackedScene" id=199]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Hustle/emotionAa001.png" type="Texture" id=200]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sounds/bc.wav" type="AudioStream" id=201]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/States/MeilingTaunt.gd" type="Script" id=202]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall006.png" type="Texture" id=203]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall001.png" type="Texture" id=204]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall000.png" type="Texture" id=205]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall003.png" type="Texture" id=206]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall004.png" type="Texture" id=207]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall002.png" type="Texture" id=208]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall005.png" type="Texture" id=209]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Start/spellCall007.png" type="Texture" id=210]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/States/Start.gd" type="Script" id=211]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb006.png" type="Texture" id=212]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb001.png" type="Texture" id=213]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb007.png" type="Texture" id=214]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb002.png" type="Texture" id=215]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb005.png" type="Texture" id=216]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb008.png" type="Texture" id=217]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/SlideKick/attackCb000.png" type="Texture" id=218]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump002.png" type="Texture" id=219]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump005.png" type="Texture" id=220]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump000.png" type="Texture" id=221]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump007.png" type="Texture" id=222]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump001.png" type="Texture" id=223]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump009.png" type="Texture" id=224]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump008.png" type="Texture" id=225]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump004.png" type="Texture" id=226]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump006.png" type="Texture" id=227]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump003.png" type="Texture" id=228]
+[ext_resource path="res://characters/robo/sprites/actionicons/air_kick.png" type="Texture" id=229]
+[ext_resource path="res://characters/stickman/sprites/actionicons/stomp.png" type="Texture" id=230]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/ActionUiData/MeilingDownKickActionUIData.tscn" type="PackedScene" id=231]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sounds/se_tan01.wav" type="AudioStream" id=232]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -266,6 +296,11 @@ animations = [ {
 "frames": [ ExtResource( 149 ), ExtResource( 151 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 152 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 150 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "DoubleJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 221 ), ExtResource( 223 ), ExtResource( 219 ), ExtResource( 228 ), ExtResource( 226 ), ExtResource( 220 ), ExtResource( 227 ), ExtResource( 222 ), ExtResource( 225 ), ExtResource( 224 ) ],
+"loop": true,
+"name": "DownKick",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 172 ), ExtResource( 170 ), ExtResource( 171 ) ],
@@ -413,9 +448,14 @@ animations = [ {
 "name": "Shot1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 180 ), ExtResource( 179 ) ],
+"frames": [ ExtResource( 218 ), ExtResource( 213 ), ExtResource( 215 ), ExtResource( 180 ), ExtResource( 179 ), ExtResource( 216 ), ExtResource( 212 ), ExtResource( 214 ), ExtResource( 217 ) ],
 "loop": true,
 "name": "SlideKick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 205 ), ExtResource( 204 ), ExtResource( 208 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 209 ), ExtResource( 203 ), ExtResource( 210 ) ],
+"loop": true,
+"name": "Start",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 81 ), ExtResource( 200 ) ],
@@ -451,8 +491,19 @@ character_portrait = ExtResource( 79 )
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 2 )
 frames = SubResource( 3 )
-animation = "AirUpwardPunch"
-frame = 6
+animation = "DownKick"
+
+[node name="Start" parent="StateMachine" index="0"]
+script = ExtResource( 211 )
+sprite_animation = "Start"
+anim_length = 120
+ticks_per_frame = 8
+title = ""
+show_in_menu = true
+interrupt_into_string = "Aerial
+Grounded
+Jump"
+change_stance_to = "Intro"
 
 [node name="Roll" parent="StateMachine" index="4"]
 anim_length = 32
@@ -460,7 +511,7 @@ ticks_per_frame = 2
 
 [node name="Wait" parent="StateMachine" index="8"]
 anim_length = 20
-ticks_per_frame = 2
+ticks_per_frame = 10
 
 [node name="HurtAerial" parent="StateMachine" index="33"]
 visible = false
@@ -470,7 +521,11 @@ script = ExtResource( 202 )
 __meta__ = {
 "_editor_description_": ""
 }
-enter_sfx = ExtResource( 201 )
+ticks_per_frame = 10
+loop_animation = true
+enter_sfx_volume = 0.0
+sfx = ExtResource( 201 )
+sfx_volume = 0.0
 
 [node name="AttackJab" type="Node2D" parent="StateMachine" index="47"]
 script = ExtResource( 86 )
@@ -523,6 +578,7 @@ reset_momentum = true
 title = "DropKick"
 type = 1
 button_texture = ExtResource( 194 )
+self_interruptable = false
 interrupt_from_string = "GroundedAttack
 GroundedHeavy
 Grounded"
@@ -548,18 +604,15 @@ apply_forces = true
 apply_fric = true
 apply_grav = true
 sprite_animation = "DiveKick"
-anim_length = 20
+anim_length = 40
 ticks_per_frame = 2
-force_dir_x = "1"
-force_dir_y = "5"
-force_speed = "2"
-force_tick = 5
-enter_force_dir_x = "2"
-enter_force_dir_y = "2"
-enter_force_speed = "2"
+force_dir_y = "10"
+force_speed = "10"
+force_tick = 20
+reset_momentum = true
 title = "DiveKick"
 type = 1
-button_texture = ExtResource( 196 )
+button_texture = ExtResource( 229 )
 air_type = 1
 interrupt_from_string = "Grounded
 GroundedAttack
@@ -583,7 +636,59 @@ hitstun_ticks = 45
 start_tick = 20
 active_ticks = 6
 
-[node name="AirUpwardPunch" type="Node2D" parent="StateMachine" index="50"]
+[node name="DownKick" type="Node2D" parent="StateMachine" index="50"]
+script = ExtResource( 196 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "DiveKick"
+anim_length = 40
+ticks_per_frame = 2
+force_tick = 20
+reset_momentum = true
+title = "DownKick"
+type = 1
+data_ui_scene = ExtResource( 231 )
+button_texture = ExtResource( 230 )
+air_type = 1
+interrupt_from_string = "Grounded
+GroundedAttack
+Aerial
+AerialAttack"
+interrupt_into_string = "Grounded
+Aerial"
+hit_cancel_into_string = "Grounded
+Aerial"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/DownKick" index="0"]
+z_index = 1000
+script = ExtResource( 87 )
+y = 1
+width = 13
+height = 5
+damage = 140
+minimum_damage = 50
+hitstun_ticks = 45
+start_tick = 20
+active_ticks = 10
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/DownKick" index="1"]
+z_index = 1000
+script = ExtResource( 87 )
+x = 11
+y = -14
+width = 3
+height = 9
+damage = 20
+minimum_damage = 10
+hitstun_ticks = 5
+start_tick = 10
+active_ticks = 10
+
+[node name="AirUpwardPunch" type="Node2D" parent="StateMachine" index="51"]
 script = ExtResource( 168 )
 apply_forces = true
 apply_fric = true
@@ -598,6 +703,7 @@ title = "AirUpwardPunch"
 type = 1
 button_texture = ExtResource( 198 )
 air_type = 2
+combo_only = true
 interrupt_from_string = "Grounded
 GroundedAttack
 Aerial
@@ -620,7 +726,7 @@ hitstun_ticks = 45
 start_tick = 7
 active_ticks = 3
 
-[node name="AirAttack" type="Node2D" parent="StateMachine" index="51"]
+[node name="AirAttack" type="Node2D" parent="StateMachine" index="52"]
 script = ExtResource( 169 )
 apply_forces = true
 apply_fric = true
@@ -655,14 +761,15 @@ hitstun_ticks = 45
 start_tick = 7
 active_ticks = 3
 
-[node name="SlideKick" type="Node2D" parent="StateMachine" index="52"]
+[node name="SlideKick" type="Node2D" parent="StateMachine" index="53"]
 script = ExtResource( 177 )
 apply_grav = true
 sprite_animation = "SlideKick"
-anim_length = 34
-ticks_per_frame = 2
+anim_length = 81
+ticks_per_frame = 8
 force_dir_x = "1.0"
-force_speed = "12.0"
+force_speed = "8.0"
+force_tick = 6
 particle_scene = ExtResource( 173 )
 spawn_particle_on_enter = true
 enter_sfx = ExtResource( 174 )
@@ -670,6 +777,7 @@ enter_sfx_volume = -10.0
 title = "Slide Kick"
 type = 1
 button_texture = ExtResource( 176 )
+self_interruptable = false
 interrupt_from_string = "Grounded
 GroundedAttack
 "
@@ -704,7 +812,7 @@ knockback = "7.0"
 grounded_hit_state = "HurtAerial"
 knockdown = true
 knockdown_extends_hitstun = false
-start_tick = 7
+start_tick = 30
 active_ticks = 8
 
 [node name="HurtboxState" type="Node2D" parent="StateMachine/SlideKick" index="1"]
@@ -718,7 +826,7 @@ start_tick = 3
 active_ticks = 6
 endless = true
 
-[node name="SlideKickAir" type="Node2D" parent="StateMachine" index="53"]
+[node name="SlideKickAir" type="Node2D" parent="StateMachine" index="54"]
 script = ExtResource( 177 )
 apply_grav = true
 sprite_animation = "SlideKick"
@@ -734,6 +842,7 @@ title = "Slide Kick"
 type = 1
 button_texture = ExtResource( 176 )
 air_type = 1
+self_interruptable = false
 interrupt_from_string = "Grounded
 GroundedAttack
 Aerial
@@ -782,7 +891,7 @@ start_tick = 3
 active_ticks = 6
 endless = true
 
-[node name="Shot" type="Node2D" parent="StateMachine" index="54"]
+[node name="Shot" type="Node2D" parent="StateMachine" index="55"]
 script = ExtResource( 86 )
 apply_forces = true
 apply_fric = true
@@ -793,6 +902,8 @@ ticks_per_frame = 2
 force_dir_x = "2"
 force_speed = "2"
 force_tick = 5
+sfx = ExtResource( 232 )
+sfx_volume = -10.0
 projectile_scene = ExtResource( 199 )
 projectile_tick = 15
 projectile_pos_x = 17
@@ -802,6 +913,7 @@ type = 2
 button_texture = ExtResource( 195 )
 air_type = 1
 interruptible_on_opponent_turn = true
+self_interruptable = false
 interrupt_from_string = "Aerial
 AerialAttack"
 interrupt_into_string = "Aerial"

@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/jump006.png-7fed9e9860ed0004661a0ab41e718f0d.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://HongMeiling/characters/HongMeiling/Sprites/DownKick/jump006.png"
+dest_files=[ "res://.import/jump006.png-7fed9e9860ed0004661a0ab41e718f0d.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

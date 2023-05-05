@@ -46,7 +46,7 @@ modulate = Color( 0.968627, 1, 0, 1 )
 material = SubResource( 3 )
 
 [node name="CollisionBox" parent="." index="2"]
-width = 5
+width = 10
 height = 5
 
 [node name="Hurtbox" parent="." index="3"]
