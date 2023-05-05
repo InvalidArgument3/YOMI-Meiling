@@ -1,0 +1,12 @@
+{
+    "name": "HongMeiling",
+    "friendly_name": "HongMeiling",
+    "description": "Gatekeeper",
+    "author": "Invalid",
+    "version": "0.46",
+    "link": "",
+    "id": "000000001",
+    "overwrites": false,
+    "requires": ["char_loader"],
+    "priority": 0
+}
