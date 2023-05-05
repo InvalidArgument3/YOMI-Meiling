@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: AnarkisGaming/workshop@v1
         with:
-          appID: 244850
+          appID: 2212330
           publishedFileID: 2967326865
         env:
           STEAM_ACCOUNT_NAME: ${{ secrets.accountname }}
