@@ -1,4 +1,4 @@
-[gd_scene load_steps=238 format=2]
+[gd_scene load_steps=240 format=2]
 
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/AirAttack/attackBc004.png" type="Texture" id=1]
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
@@ -198,7 +198,7 @@
 [ext_resource path="res://HongMeiling/characters/HongMeiling/States/DownKick.gd" type="Script" id=196]
 [ext_resource path="res://ui/ActionSelector/StateIcons/punch.png" type="Texture" id=197]
 [ext_resource path="res://characters/swordandgun/sprites/action_buttons/upward_swipe.png" type="Texture" id=198]
-[ext_resource path="res://HongMeiling/characters/HongMeiling/Shot.tscn" type="PackedScene" id=199]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Shot1.tscn" type="PackedScene" id=199]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Hustle/emotionAa001.png" type="Texture" id=200]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sounds/bc.wav" type="AudioStream" id=201]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/States/MeilingTaunt.gd" type="Script" id=202]
@@ -234,6 +234,8 @@
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sounds/se_tan01.wav" type="AudioStream" id=232]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/States/ShotBasic.gd" type="Script" id=233]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/States/ShotSpecial.gd" type="Script" id=234]
+[ext_resource path="res://characters/wizard/sprites/actionbuttons/icicle_air.png" type="Texture" id=235]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Shot4.tscn" type="PackedScene" id=236]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -558,9 +560,9 @@ x = 9
 y = -25
 width = 9
 height = 5
-damage = 100
-minimum_damage = 50
-hitstun_ticks = 45
+damage = 50
+minimum_damage = 20
+hitstun_ticks = 25
 start_tick = 7
 active_ticks = 3
 
@@ -594,9 +596,9 @@ x = 14
 y = -15
 width = 14
 height = 11
-damage = 100
-minimum_damage = 50
-hitstun_ticks = 45
+damage = 50
+minimum_damage = 20
+hitstun_ticks = 25
 start_tick = 7
 active_ticks = 3
 
@@ -722,9 +724,9 @@ x = 20
 y = -33
 width = 10
 height = 10
-damage = 100
-minimum_damage = 50
-hitstun_ticks = 45
+damage = 50
+minimum_damage = 20
+hitstun_ticks = 20
 start_tick = 7
 active_ticks = 3
 
@@ -759,9 +761,9 @@ x = 15
 y = -23
 width = 15
 height = 7
-damage = 100
-minimum_damage = 50
-hitstun_ticks = 45
+damage = 50
+minimum_damage = 20
+hitstun_ticks = 20
 start_tick = 7
 active_ticks = 3
 
@@ -935,20 +937,20 @@ apply_forces = true
 apply_fric = true
 apply_grav = true
 sprite_animation = "Shot1"
-anim_length = 18
+anim_length = 48
 ticks_per_frame = 2
 force_dir_x = "-2"
 force_speed = "2"
 force_tick = 10
 sfx = ExtResource( 232 )
 sfx_volume = -10.0
-projectile_scene = ExtResource( 199 )
+projectile_scene = ExtResource( 236 )
 projectile_tick = 15
 projectile_pos_x = 17
 projectile_pos_y = -21
-title = "Danmaku1"
+title = "Danmaku2"
 type = 3
-button_texture = ExtResource( 195 )
+button_texture = ExtResource( 235 )
 air_type = 1
 interruptible_on_opponent_turn = true
 self_interruptable = false
