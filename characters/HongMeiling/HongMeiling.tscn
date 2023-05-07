@@ -1,4 +1,4 @@
-[gd_scene load_steps=236 format=2]
+[gd_scene load_steps=238 format=2]
 
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/AirAttack/attackBc004.png" type="Texture" id=1]
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
@@ -232,6 +232,8 @@
 [ext_resource path="res://characters/stickman/sprites/actionicons/stomp.png" type="Texture" id=230]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/ActionUiData/MeilingDownKickActionUIData.tscn" type="PackedScene" id=231]
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sounds/se_tan01.wav" type="AudioStream" id=232]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/States/ShotBasic.gd" type="Script" id=233]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/States/ShotSpecial.gd" type="Script" id=234]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -568,7 +570,7 @@ apply_forces = true
 apply_fric = true
 apply_grav = true
 sprite_animation = "DropKick"
-anim_length = 20
+anim_length = 35
 ticks_per_frame = 2
 endless = true
 enter_force_dir_x = "0.75"
@@ -604,7 +606,7 @@ apply_forces = true
 apply_fric = true
 apply_grav = true
 sprite_animation = "DiveKick"
-anim_length = 40
+anim_length = 50
 ticks_per_frame = 2
 force_dir_y = "10"
 force_speed = "10"
@@ -630,8 +632,8 @@ x = 20
 y = -2
 width = 10
 height = 10
-damage = 100
-minimum_damage = 50
+damage = 50
+minimum_damage = 20
 hitstun_ticks = 45
 start_tick = 20
 active_ticks = 6
@@ -696,7 +698,7 @@ apply_grav = true
 sprite_animation = "AirUpwardPunch"
 anim_length = 36
 ticks_per_frame = 2
-force_dir_x = "4"
+force_dir_x = "2"
 force_speed = "2"
 force_tick = 5
 title = "AirUpwardPunch"
@@ -735,6 +737,8 @@ fallback_state = "Fall"
 sprite_animation = "AirAttack"
 anim_length = 40
 ticks_per_frame = 2
+force_dir_x = "1"
+force_speed = "1"
 enter_force_dir_x = "2"
 enter_force_speed = "2"
 title = "AirAttack"
@@ -892,16 +896,19 @@ active_ticks = 6
 endless = true
 
 [node name="Shot" type="Node2D" parent="StateMachine" index="55"]
-script = ExtResource( 86 )
+script = ExtResource( 233 )
+__meta__ = {
+"_editor_description_": ""
+}
 apply_forces = true
 apply_fric = true
 apply_grav = true
 sprite_animation = "Shot1"
 anim_length = 18
 ticks_per_frame = 2
-force_dir_x = "2"
+force_dir_x = "-2"
 force_speed = "2"
-force_tick = 5
+force_tick = 10
 sfx = ExtResource( 232 )
 sfx_volume = -10.0
 projectile_scene = ExtResource( 199 )
@@ -910,6 +917,37 @@ projectile_pos_x = 17
 projectile_pos_y = -21
 title = "Danmaku1"
 type = 2
+button_texture = ExtResource( 195 )
+air_type = 1
+interruptible_on_opponent_turn = true
+self_interruptable = false
+interrupt_from_string = "Aerial
+AerialAttack"
+interrupt_into_string = "Aerial"
+hit_cancel_into_string = "Aerial"
+
+[node name="ShotSpecial" type="Node2D" parent="StateMachine" index="56"]
+script = ExtResource( 234 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "Shot1"
+anim_length = 18
+ticks_per_frame = 2
+force_dir_x = "-2"
+force_speed = "2"
+force_tick = 10
+sfx = ExtResource( 232 )
+sfx_volume = -10.0
+projectile_scene = ExtResource( 199 )
+projectile_tick = 15
+projectile_pos_x = 17
+projectile_pos_y = -21
+title = "Danmaku1"
+type = 3
 button_texture = ExtResource( 195 )
 air_type = 1
 interruptible_on_opponent_turn = true
