@@ -606,8 +606,8 @@ __meta__ = {
 }
 x = 13
 y = -20
-width = 23
-height = 10
+width = 13
+height = -5
 damage = 105
 hitstun_ticks = 20
 hitlag_ticks = 7
@@ -617,7 +617,7 @@ dir_x = "1"
 dir_y = "-0.25"
 knockback = "13.0"
 wall_slam = true
-start_tick = 11
+start_tick = 7
 
 [node name="DiveKick" type="Node2D" parent="StateMachine" index="49"]
 script = ExtResource( 167 )
@@ -822,9 +822,9 @@ script = ExtResource( 87 )
 __meta__ = {
 "_editor_description_": ""
 }
-x = 26
+x = 14
 y = -5
-width = 22
+width = 14
 height = 5
 damage = 120
 hitlag_ticks = 7
@@ -837,7 +837,7 @@ dir_y = "-0.25"
 knockback = "6.0"
 grounded_hit_state = "HurtAerial"
 knockdown = true
-start_tick = 7
+start_tick = 10
 active_ticks = 2
 
 [node name="HurtboxState" type="Node2D" parent="StateMachine/SlideKick" index="1"]
@@ -940,7 +940,6 @@ data_ui_scene = ExtResource( 236 )
 button_texture = ExtResource( 195 )
 air_type = 1
 interruptible_on_opponent_turn = true
-self_interruptable = false
 interrupt_from_string = "Aerial
 AerialAttack"
 interrupt_into_string = "Aerial"
@@ -964,7 +963,7 @@ sfx = ExtResource( 232 )
 sfx_volume = -10.0
 projectile_pos_x = 17
 projectile_pos_y = -21
-title = "Danmaku3"
+title = "Danmaku2"
 type = 2
 data_ui_scene = ExtResource( 236 )
 button_texture = ExtResource( 195 )
@@ -994,7 +993,8 @@ sfx = ExtResource( 232 )
 sfx_volume = -10.0
 projectile_pos_x = 17
 projectile_pos_y = -21
-title = "Danmaku2"
+title = "Danmaku3"
+show_in_menu = false
 type = 3
 data_ui_scene = ExtResource( 237 )
 button_texture = ExtResource( 235 )
@@ -1005,6 +1005,7 @@ interrupt_from_string = "Aerial
 AerialAttack"
 interrupt_into_string = "Aerial"
 hit_cancel_into_string = "Aerial"
+super_level = 2
 
 [node name="EmoteLabel" parent="." index="10"]
 margin_top = -67.0

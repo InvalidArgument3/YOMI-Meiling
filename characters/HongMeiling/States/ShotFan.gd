@@ -1,10 +1,10 @@
-extends CharacterState
+extends SuperMove
 
 export var _c_SimpleProjectile = 0
 export (PackedScene) var SimpleProjectileScene
 export var spawn_x_pos = 5
 export var spawn_y_pos = -10
-export var spawn_tick = 8
+export var spawn_tick = 1
 export var static_x_dir = 1
 export var static_y_dir = 0
 export var speed = 5
@@ -13,7 +13,19 @@ export var projectile_count = 3
 export var projectile_spread = 30
 
 func _ready():
-	SimpleProjectileScene = ResourceLoader.load("res://HongMeiling/characters/HongMeiling/Shot1.tscn")
+	# Initialize the array of projectile scenes to choose from
+	var projectile_scenes = [
+		"res://HongMeiling/characters/HongMeiling/Shot1.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot2.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot3.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot4.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot5.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot6.tscn",
+		"res://HongMeiling/characters/HongMeiling/Shot7.tscn"
+	]
+	
+	# Load a random projectile scene
+	SimpleProjectileScene = ResourceLoader.load(projectile_scenes[randi() % projectile_scenes.size()])
 
 func _tick():
 	if current_tick == spawn_tick:

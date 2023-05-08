@@ -55,13 +55,16 @@ height = 5
 
 [node name="Default" parent="StateMachine" index="0"]
 script = ExtResource( 2 )
-move_speed = "15.0"
+__meta__ = {
+"_editor_description_": ""
+}
+move_speed = "10.0"
 _c_Homing_Options = 0
 homing = true
-homing_turn_speed = "0.1"
-homing_accel = "1"
+homing_turn_speed = "0"
+homing_accel = "0.25"
 max_homing_speed = "10"
-start_homing = false
+start_homing = true
 relative_data_dir = false
 bounce_on_ground = false
 num_bounces = 2
