@@ -1,4 +1,4 @@
-[gd_scene load_steps=243 format=2]
+[gd_scene load_steps=246 format=2]
 
 [ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/AirAttack/attackBc004.png" type="Texture" id=1]
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
@@ -239,6 +239,9 @@
 [ext_resource path="res://HongMeiling/characters/HongMeiling/ActionUiData/MeilingShotSpecialActionUIData.tscn" type="PackedScene" id=237]
 [ext_resource path="res://sound/common/hit4.wav" type="AudioStream" id=238]
 [ext_resource path="res://sound/common/hit3.wav" type="AudioStream" id=239]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DashForward/dashFront002.png" type="Texture" id=240]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/DashForward/dashFront003.png" type="Texture" id=241]
+[ext_resource path="res://characters/swordandgun/sprites/action_buttons/h_slash.png" type="Texture" id=242]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -318,6 +321,11 @@ animations = [ {
 "frames": [ ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "Fireball",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 3 ), ExtResource( 240 ), ExtResource( 241 ) ],
+"loop": true,
+"name": "ForwardCharge",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 138 ), ExtResource( 139 ), ExtResource( 57 ), ExtResource( 66 ), ExtResource( 22 ), ExtResource( 135 ), ExtResource( 70 ) ],
@@ -498,8 +506,7 @@ character_portrait = ExtResource( 79 )
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 2 )
 frames = SubResource( 3 )
-animation = "AirAttack"
-frame = 1
+animation = "ForwardCharge"
 
 [node name="Start" parent="StateMachine" index="0"]
 script = ExtResource( 211 )
@@ -575,7 +582,48 @@ knockback = "2.0"
 start_tick = 4
 active_ticks = 2
 
-[node name="DropKick" type="Node2D" parent="StateMachine" index="48"]
+[node name="ForwardCharge" type="Node2D" parent="StateMachine" index="48"]
+script = ExtResource( 86 )
+apply_forces = true
+apply_grav = true
+sprite_animation = "ForwardCharge"
+anim_length = 26
+ticks_per_frame = 2
+force_dir_x = "20"
+force_speed = "20"
+force_tick = 5
+title = "ForwardCharge"
+type = 1
+button_texture = ExtResource( 242 )
+air_type = 2
+interrupt_from_string = "Grounded
+GroundedAttack
+Aerial
+AerialAttack"
+interrupt_into_string = "Grounded
+Aerial"
+hit_cancel_into_string = "Grounded
+Aerial"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/ForwardCharge" index="0"]
+z_index = 1000
+script = ExtResource( 87 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = 9
+y = -19
+width = 8
+height = 17
+damage = 30
+hitstun_ticks = 12
+victim_hitlag = 4
+damage_proration = 2
+knockback = "2.0"
+start_tick = 4
+active_ticks = 20
+
+[node name="DropKick" type="Node2D" parent="StateMachine" index="49"]
 script = ExtResource( 35 )
 apply_forces = true
 apply_fric = true
@@ -619,7 +667,7 @@ knockback = "13.0"
 wall_slam = true
 start_tick = 7
 
-[node name="DiveKick" type="Node2D" parent="StateMachine" index="49"]
+[node name="DiveKick" type="Node2D" parent="StateMachine" index="50"]
 script = ExtResource( 167 )
 apply_forces = true
 apply_fric = true
@@ -657,7 +705,7 @@ hitstun_ticks = 45
 start_tick = 10
 active_ticks = 6
 
-[node name="DownKick" type="Node2D" parent="StateMachine" index="50"]
+[node name="DownKick" type="Node2D" parent="StateMachine" index="51"]
 script = ExtResource( 196 )
 __meta__ = {
 "_editor_description_": ""
@@ -709,7 +757,7 @@ hitstun_ticks = 5
 start_tick = 10
 active_ticks = 10
 
-[node name="AirUpwardPunch" type="Node2D" parent="StateMachine" index="51"]
+[node name="AirUpwardPunch" type="Node2D" parent="StateMachine" index="52"]
 script = ExtResource( 168 )
 apply_forces = true
 apply_fric = true
@@ -747,7 +795,7 @@ hitstun_ticks = 20
 start_tick = 7
 active_ticks = 3
 
-[node name="AirAttack" type="Node2D" parent="StateMachine" index="52"]
+[node name="AirAttack" type="Node2D" parent="StateMachine" index="53"]
 script = ExtResource( 169 )
 apply_forces = true
 apply_fric = true
@@ -784,7 +832,7 @@ hitstun_ticks = 20
 start_tick = 7
 active_ticks = 3
 
-[node name="SlideKick" type="Node2D" parent="StateMachine" index="53"]
+[node name="SlideKick" type="Node2D" parent="StateMachine" index="54"]
 script = ExtResource( 177 )
 apply_grav = true
 sprite_animation = "SlideKick"
@@ -851,7 +899,7 @@ start_tick = 3
 active_ticks = 6
 endless = true
 
-[node name="SlideKickAir" type="Node2D" parent="StateMachine" index="54"]
+[node name="SlideKickAir" type="Node2D" parent="StateMachine" index="55"]
 script = ExtResource( 177 )
 apply_grav = true
 sprite_animation = "SlideKick"
@@ -916,7 +964,7 @@ start_tick = 3
 active_ticks = 6
 endless = true
 
-[node name="Shot" type="Node2D" parent="StateMachine" index="55"]
+[node name="Shot" type="Node2D" parent="StateMachine" index="56"]
 script = ExtResource( 233 )
 __meta__ = {
 "_editor_description_": ""
@@ -945,7 +993,7 @@ AerialAttack"
 interrupt_into_string = "Aerial"
 hit_cancel_into_string = "Aerial"
 
-[node name="ShotFan" type="Node2D" parent="StateMachine" index="56"]
+[node name="ShotFan" type="Node2D" parent="StateMachine" index="57"]
 script = ExtResource( 199 )
 __meta__ = {
 "_editor_description_": ""
@@ -975,7 +1023,7 @@ AerialAttack"
 interrupt_into_string = "Aerial"
 hit_cancel_into_string = "Aerial"
 
-[node name="ShotSpecial" type="Node2D" parent="StateMachine" index="57"]
+[node name="ShotSpecial" type="Node2D" parent="StateMachine" index="58"]
 script = ExtResource( 234 )
 __meta__ = {
 "_editor_description_": ""
