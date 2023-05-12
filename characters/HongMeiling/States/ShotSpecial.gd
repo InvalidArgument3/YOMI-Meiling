@@ -9,7 +9,7 @@ export var static_x_dir = 1
 export var static_y_dir = 0
 export var speed = 5
 export var lifetime = 900
-export var projectile_count = 3
+export var projectile_count = 7
 export var projectile_spread = 120
 
 func _ready():

@@ -1042,7 +1042,6 @@ sfx_volume = -10.0
 projectile_pos_x = 17
 projectile_pos_y = -21
 title = "Danmaku3"
-show_in_menu = false
 type = 3
 data_ui_scene = ExtResource( 237 )
 button_texture = ExtResource( 235 )
