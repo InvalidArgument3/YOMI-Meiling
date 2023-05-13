@@ -7,7 +7,7 @@ export var spawn_y_pos = -10
 export var spawn_tick = 1
 export var static_x_dir = 1
 export var static_y_dir = 0
-export var speed = 5
+export var speed = 10
 export var lifetime = 900
 export var projectile_count = 7
 export var projectile_spread = 120
@@ -15,13 +15,7 @@ export var projectile_spread = 120
 func _ready():
 	# Initialize the array of projectile scenes to choose from
 	var projectile_scenes = [
-		"res://HongMeiling/characters/HongMeiling/Shot1.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot2.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot3.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot4.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot5.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot6.tscn",
-		"res://HongMeiling/characters/HongMeiling/Shot7.tscn"
+		"res://HongMeiling/characters/HongMeiling/ShotGuided.tscn",
 	]
 	
 	# Load a random projectile scene

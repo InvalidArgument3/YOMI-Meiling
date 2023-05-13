@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://projectile/DirProjectileDefault.gd" type="Script" id=2]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=3]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/Sprites/Bullets/bulletBa004.png" type="Texture" id=4]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=5]
+[ext_resource path="res://sound/common/hit2.wav" type="AudioStream" id=6]
+[ext_resource path="res://HongMeiling/characters/HongMeiling/ParticleEffect.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="BaseProjectile" instance=ExtResource( 1 )]
+material = SubResource( 1 )
+extra_state_variables = "immunity_susceptible"
+
+[node name="Sprite" parent="Flip" index="0"]
+modulate = Color( 0.662745, 0, 1, 1 )
+frames = SubResource( 2 )
+
+[node name="ParticleEffect" parent="Flip/Particles" index="0" instance=ExtResource( 7 )]
+modulate = Color( 0.537255, 0, 0.827451, 1 )
+material = SubResource( 3 )
+
+[node name="CollisionBox" parent="." index="2"]
+width = 10
+height = 5
+
+[node name="Hurtbox" parent="." index="3"]
+width = 5
+height = 5
+
+[node name="Default" parent="StateMachine" index="0"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+move_speed = "10.0"
+_c_Homing_Options = 0
+homing = true
+homing_turn_speed = "0.03"
+homing_accel = "0.25"
+max_homing_speed = "10"
+start_homing = true
+relative_data_dir = false
+bounce_on_ground = false
+num_bounces = 2
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+width = 4
+height = 4
+damage = 40
+minimum_damage = 15
+hitstun_ticks = 5
+cancellable = false
+hit_height = 2
+hit_sound = ExtResource( 6 )
+dir_x = "-1.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+knockdown_extends_hitstun = false
+start_tick = 1
+active_ticks = 1
+always_on = true
